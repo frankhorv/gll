@@ -1,7 +1,7 @@
 #![deny(rust_2018_idioms)]
 
 use proc_macro::TokenStream;
-use proc_quote::ToTokens as _;
+use quote::ToTokens;
 
 #[proc_macro]
 pub fn scannerless_parser(input: TokenStream) -> TokenStream {

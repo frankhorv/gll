@@ -1,6 +1,6 @@
 [package]
 name = "gll"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
     "Ana-Maria <mihalacheana.maria@yahoo.com>",
     "Eduard-Mihai Burtescu <edy.burt@gmail.com>"
@@ -10,28 +10,28 @@ license = "MIT/Apache-2.0"
 keywords = ["grammar", "generator", "GLL", "parser"]
 readme = "README.md"
 description = "GLL parsing framework."
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 indexmap = "1"
-grammer = "0.0.1"
-proc-macro2 = "0.4.30"
-proc-quote = "0.2.2"
+grammer = "0"
+proc-macro2 = "1"
+quote = "1"
 
 [build-dependencies]
 indexmap = "1"
-grammer = "0.0.1"
-proc-macro2 = "0.4.30"
-proc-quote = "0.2.2"
+grammer = "0"
+proc-macro2 = "1"
+quote = "1"
 
 [lib]
 doctest = false
 test = false
 
-[patch.'crates-io']
-grammer = { git = "https://github.com/lykenware/grammer", rev = "eecb1b16cd234408d066fabec63786003925452d" }
-
 [workspace]
 members = [
     "macros"
 ]
+
+[patch.'crates-io']
+grammer = { git = "https://github.com/frankhorv/grammer", rev = "ac93e578e68d219d54c569a5c6380037f4bcd714" }

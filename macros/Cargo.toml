@@ -1,6 +1,6 @@
 [package]
 name = "gll-macros"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
     "Ana-Maria <mihalacheana.maria@yahoo.com>",
     "Eduard-Mihai Burtescu <edy.burt@gmail.com>"
@@ -12,10 +12,10 @@ edition = "2018"
 
 [dependencies.gll]
 path = ".."
-version = "0.0.2"
+version = "0.0.3"
 
 [dependencies]
-proc-quote = "0.2.2"
+quote = "1"
 
 [lib]
 doctest = false

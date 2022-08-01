@@ -1,5 +1,5 @@
 use proc_macro2::{Delimiter, Ident, LexError, Literal, Spacing, Span, TokenStream, TokenTree};
-use proc_quote::ToTokens;
+use quote::ToTokens;
 use std::fmt;
 use std::io::Write;
 use std::mem;
@@ -123,7 +123,7 @@ impl ToTokens for Src {
 pub use crate::__generate_src_quote as quote;
 #[macro_export]
 macro_rules! __generate_src_quote {
-    ($($t:tt)*) => { $crate::generate::src::Src::new(::proc_quote::quote!($($t)*)) };
+    ($($t:tt)*) => { $crate::generate::src::Src::new(::quote::quote!($($t)*)) };
 }
 
 // Pretty-printing support.
